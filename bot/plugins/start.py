@@ -18,11 +18,8 @@ async def _start(c, m):
     await m.reply_text(
         text=tr.START_MSG.format(m.from_user.first_name),
         quote=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('Join Project Channel!', url='https://t.me/odbots')
-                ]
-            ]
-        )
+       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⭕️ CHANNEL ⭕️", url="https://t.me/All_Movie_Rockers")], [InlineKeyboardButton(text="😇 SUPPORT", url="https://t.me/allmovierockerssdiscussion"),
+                                                    InlineKeyboardButton(text="Creator ♐️", url="https://t.me/shreevish")]]),
+        
+        reply_to_message_id=update.message_id
     )
